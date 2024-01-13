@@ -1,0 +1,40 @@
+# Pobranie wszystkich produktów
+GET http://localhost:3000/products
+
+###
+
+# Dodanie nowego produktu
+POST http://localhost:3000/products
+Content-Type: application/json
+
+{
+  "name": "Nowy Produkt",
+  "price": 19.99,
+  "description": "Opis nowego produktu",
+  "quantity": 100,
+  "unit": "szt"
+}
+
+###
+
+# Aktualizacja produktu (zastąp `:id` rzeczywistym ID produktu)
+PUT http://localhost:3000/products/65a2ef19e89f23d4a00e6422
+Content-Type: application/json
+
+{
+  "name": "Zaktualizowany Produkt",
+  "price": 29.99,
+  "description": "Zaktualizowany opis produktu",
+  "quantity": 50,
+  "unit": "szt"
+}
+
+###
+
+# Usunięcie produktu (zastąp `:id` rzeczywistym ID produktu)
+DELETE http://localhost:3000/products/65a2ef19e89f23d4a00e6421
+
+###
+
+### Raport Stanu Magazynu
+GET http://localhost:3000/products/report
